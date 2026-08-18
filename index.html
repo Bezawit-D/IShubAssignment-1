@@ -1,0 +1,1231 @@
+<!DOCTYPE html>  <html lang="en">  <head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Bezawit Demelash | Portfolio</title>  
+
+<style>  
+
+    /* =========================  
+       RESET  
+    ========================== */  
+
+    * {  
+        margin: 0;  
+        padding: 0;  
+        box-sizing: border-box;  
+    }  
+
+    html {  
+        scroll-behavior: smooth;  
+    }  
+
+    body {  
+        font-family: Arial, Helvetica, sans-serif;  
+        background: #f8fafc;  
+        color: #1e293b;  
+        line-height: 1.6;  
+    }  
+
+    a {  
+        text-decoration: none;  
+    }  
+
+
+    /* =========================  
+       NAVIGATION  
+    ========================== */  
+
+    header {  
+        background: #ffffff;  
+        position: sticky;  
+        top: 0;  
+        z-index: 1000;  
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);  
+    }  
+
+    .navbar {  
+        max-width: 1100px;  
+        margin: auto;  
+        padding: 18px 25px;  
+
+        display: flex;  
+        justify-content: space-between;  
+        align-items: center;  
+    }  
+
+    .logo {  
+        font-size: 1.5rem;  
+        font-weight: bold;  
+        color: #6366f1;  
+    }  
+
+    .logo span {  
+        color: #0f172a;  
+    }  
+
+    .nav-links {  
+        display: flex;  
+        gap: 25px;  
+        list-style: none;  
+    }  
+
+    .nav-links a {  
+        color: #475569;  
+        font-weight: 600;  
+        transition: 0.3s;  
+    }  
+
+    .nav-links a:hover {  
+        color: #6366f1;  
+    }  
+
+
+    /* =========================  
+       HERO SECTION  
+    ========================== */  
+
+    .hero {  
+        min-height: 90vh;  
+        background:  
+            linear-gradient(  
+                135deg,  
+                #eef2ff,  
+                #f8fafc  
+            );  
+
+        display: flex;  
+        align-items: center;  
+    }  
+
+    .hero-container {  
+        max-width: 1100px;  
+        width: 100%;  
+        margin: auto;  
+        padding: 70px 25px;  
+
+        display: grid;  
+        grid-template-columns: 1.2fr 0.8fr;  
+        gap: 50px;  
+        align-items: center;  
+    }  
+
+    .hero-text h4 {  
+        color: #6366f1;  
+        font-size: 1.1rem;  
+        margin-bottom: 10px;  
+    }  
+
+    .hero-text h1 {  
+        font-size: 3.5rem;  
+        line-height: 1.1;  
+        margin-bottom: 20px;  
+        color: #0f172a;  
+    }  
+
+    .hero-text h1 span {  
+        color: #6366f1;  
+    }  
+
+    .hero-text p {  
+        max-width: 600px;  
+        color: #64748b;  
+        font-size: 1.1rem;  
+        margin-bottom: 30px;  
+    }  
+
+    .hero-buttons {  
+        display: flex;  
+        gap: 15px;  
+        flex-wrap: wrap;  
+    }  
+
+    .btn {  
+        padding: 13px 25px;  
+        border-radius: 8px;  
+        font-weight: bold;  
+        transition: 0.3s;  
+        display: inline-block;  
+    }  
+
+    .primary-btn {  
+        background: #6366f1;  
+        color: white;  
+    }  
+
+    .primary-btn:hover {  
+        background: #4f46e5;  
+        transform: translateY(-3px);  
+    }  
+
+    .secondary-btn {  
+        border: 2px solid #6366f1;  
+        color: #6366f1;  
+    }  
+
+    .secondary-btn:hover {  
+        background: #6366f1;  
+        color: white;  
+    }  
+
+
+    /* =========================  
+       PROFILE IMAGE  
+    ========================== */  
+
+    .hero-image {  
+        display: flex;  
+        justify-content: center;  
+    }  
+
+    .profile-container {  
+        width: 330px;  
+        height: 330px;  
+        border-radius: 50%;  
+        padding: 10px;  
+        background: linear-gradient(  
+            135deg,  
+            #6366f1,  
+            #a855f7  
+        );  
+
+        box-shadow: 0 20px 50px rgba(99, 102, 241, 0.25);  
+    }  
+
+    .profile-container img {  
+        width: 100%;  
+        height: 100%;  
+        object-fit: cover;  
+        border-radius: 50%;  
+        border: 7px solid white;  
+    }  
+
+
+    /* =========================  
+       GENERAL SECTION  
+    ========================== */  
+
+    section {  
+        padding: 80px 20px;  
+    }  
+
+    .container {  
+        max-width: 1000px;  
+        margin: auto;  
+    }  
+
+    .section-title {  
+        text-align: center;  
+        margin-bottom: 50px;  
+    }  
+
+    .section-title h2 {  
+        font-size: 2.2rem;  
+        color: #0f172a;  
+        margin-bottom: 10px;  
+    }  
+
+    .section-title p {  
+        color: #64748b;  
+    }  
+
+    .section-title .line {  
+        width: 60px;  
+        height: 4px;  
+        background: #6366f1;  
+        margin: 15px auto;  
+        border-radius: 10px;  
+    }  
+
+
+    /* =========================  
+       ABOUT  
+    ========================== */  
+
+    .about {  
+        background: white;  
+    }  
+
+    .about-content {  
+        display: grid;  
+        grid-template-columns: 1fr 1fr;  
+        gap: 40px;  
+        align-items: center;  
+    }  
+
+    .about-text h3 {  
+        font-size: 1.7rem;  
+        margin-bottom: 15px;  
+        color: #0f172a;  
+    }  
+
+    .about-text p {  
+        color: #64748b;  
+        margin-bottom: 15px;  
+    }  
+
+    .about-boxes {  
+        display: grid;  
+        grid-template-columns: 1fr 1fr;  
+        gap: 15px;  
+    }  
+
+    .about-box {  
+        padding: 25px;  
+        background: #f8fafc;  
+        border-radius: 12px;  
+        border: 1px solid #e2e8f0;  
+    }  
+
+    .about-box h4 {  
+        color: #6366f1;  
+        margin-bottom: 5px;  
+    }  
+
+    .about-box p {  
+        color: #64748b;  
+    }  
+
+
+    /* =========================  
+       SKILLS  
+    ========================== */  
+
+    .skills {  
+        background: #f8fafc;  
+    }  
+
+    .skills-grid {  
+        display: grid;  
+        grid-template-columns: repeat(2, 1fr);  
+        gap: 20px;  
+    }  
+
+    .skill-card {  
+        background: white;  
+        padding: 25px;  
+        border-radius: 15px;  
+        border: 1px solid #e2e8f0;  
+        transition: 0.3s;  
+    }  
+
+    .skill-card:hover {  
+        transform: translateY(-7px);  
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);  
+    }  
+
+    .skill-number {  
+        width: 45px;  
+        height: 45px;  
+        background: #eef2ff;  
+        color: #6366f1;  
+        border-radius: 10px;  
+
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+
+        font-weight: bold;  
+        margin-bottom: 15px;  
+    }  
+
+    .skill-card h3 {  
+        margin-bottom: 8px;  
+        color: #0f172a;  
+    }  
+
+    .skill-card p {  
+        color: #64748b;  
+    }  
+
+
+    /* =========================  
+       HOBBIES  
+    ========================== */  
+
+    .hobbies {  
+        background: white;  
+    }  
+
+    .hobbies-grid {  
+        display: grid;  
+        grid-template-columns: repeat(4, 1fr);  
+        gap: 15px;  
+    }  
+
+    .hobby {  
+        text-align: center;  
+        padding: 25px 15px;  
+        background: #f8fafc;  
+        border-radius: 12px;  
+        transition: 0.3s;  
+    }  
+
+    .hobby:hover {  
+        background: #eef2ff;  
+        transform: translateY(-5px);  
+    }  
+
+    .hobby .icon {  
+        font-size: 2rem;  
+        margin-bottom: 10px;  
+    }  
+
+    .hobby h4 {  
+        color: #334155;  
+    }  
+
+
+    /* =========================  
+       EDUCATION  
+    ========================== */  
+
+    .education {  
+        background: #f8fafc;  
+    }  
+
+    .education-card {  
+        background: white;  
+        padding: 30px;  
+        border-radius: 15px;  
+        border-left: 5px solid #6366f1;  
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);  
+    }  
+
+    .education-card h3 {  
+        color: #0f172a;  
+        margin-bottom: 8px;  
+    }  
+
+    .education-card p {  
+        color: #64748b;  
+    }  
+
+    .status {  
+        display: inline-block;  
+        margin-top: 15px;  
+        padding: 6px 14px;  
+        border-radius: 20px;  
+        background: #dcfce7;  
+        color: #166534;  
+        font-size: 0.85rem;  
+        font-weight: bold;  
+    }  
+
+
+    /* =========================  
+       CONTACT  
+    ========================== */  
+
+    .contact {  
+        background: white;  
+    }  
+
+    .contact-content {  
+        display: grid;  
+        grid-template-columns: 0.8fr 1.2fr;  
+        gap: 40px;  
+    }  
+
+    .contact-info h3 {  
+        font-size: 1.6rem;  
+        margin-bottom: 15px;  
+    }  
+
+    .contact-info p {  
+        color: #64748b;  
+        margin-bottom: 20px;  
+    }  
+
+    .contact-item {  
+        margin-bottom: 15px;  
+    }  
+
+    .contact-item strong {  
+        color: #6366f1;  
+    }  
+
+    .contact-item a {  
+        color: #475569;  
+    }  
+
+    .contact-form {  
+        background: #f8fafc;  
+        padding: 30px;  
+        border-radius: 15px;  
+    }  
+
+    .form-group {  
+        margin-bottom: 18px;  
+    }  
+
+    label {  
+        display: block;  
+        margin-bottom: 7px;  
+        font-weight: bold;  
+        color: #334155;  
+    }  
+
+    input,  
+    select,  
+    textarea {  
+        width: 100%;  
+        padding: 12px 15px;  
+        border: 1px solid #cbd5e1;  
+        border-radius: 8px;  
+        font-family: inherit;  
+        font-size: 1rem;  
+        outline: none;  
+        background: white;  
+        transition: 0.3s;  
+    }  
+
+    input:focus,  
+    select:focus,  
+    textarea:focus {  
+        border-color: #6366f1;  
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);  
+    }  
+
+    textarea {  
+        resize: vertical;  
+    }  
+
+    .submit-btn {  
+        width: 100%;  
+        padding: 13px;  
+        background: #6366f1;  
+        color: white;  
+        border: none;  
+        border-radius: 8px;  
+        font-weight: bold;  
+        cursor: pointer;  
+        font-size: 1rem;  
+        transition: 0.3s;  
+    }  
+
+    .submit-btn:hover {  
+        background: #4f46e5;  
+        transform: translateY(-2px);  
+    }  
+
+
+    /* =========================  
+       FOOTER  
+    ========================== */  
+
+    footer {  
+        background: #0f172a;  
+        color: white;  
+        text-align: center;  
+        padding: 35px 20px;  
+    }  
+
+    footer h3 {  
+        margin-bottom: 10px;  
+    }  
+
+    footer p {  
+        color: #94a3b8;  
+        margin: 5px;  
+    }  
+
+    footer a {  
+        color: #a5b4fc;  
+    }  
+
+
+    /* =========================  
+       RESPONSIVE DESIGN  
+    ========================== */  
+
+    @media (max-width: 800px) {  
+
+        .navbar {  
+            flex-direction: column;  
+            gap: 15px;  
+        }  
+
+        .nav-links {  
+            gap: 15px;  
+            flex-wrap: wrap;  
+            justify-content: center;  
+        }  
+
+        .hero-container {  
+            grid-template-columns: 1fr;  
+            text-align: center;  
+        }  
+
+        .hero-text p {  
+            margin-left: auto;  
+            margin-right: auto;  
+        }  
+
+        .hero-buttons {  
+            justify-content: center;  
+        }  
+
+        .hero-image {  
+            order: -1;  
+        }  
+
+        .profile-container {  
+            width: 250px;  
+            height: 250px;  
+        }  
+
+        .about-content {  
+            grid-template-columns: 1fr;  
+        }  
+
+        .contact-content {  
+            grid-template-columns: 1fr;  
+        }  
+
+        .hobbies-grid {  
+            grid-template-columns: repeat(2, 1fr);  
+        }  
+    }  
+
+
+    @media (max-width: 550px) {  
+
+        .hero {  
+            min-height: auto;  
+        }  
+
+        .hero-container {  
+            padding: 60px 20px;  
+        }  
+
+        .hero-text h1 {  
+            font-size: 2.4rem;  
+        }  
+
+        .hero-text p {  
+            font-size: 1rem;  
+        }  
+
+        section {  
+            padding: 60px 15px;  
+        }  
+
+        .section-title h2 {  
+            font-size: 1.8rem;  
+        }  
+
+        .skills-grid {  
+            grid-template-columns: 1fr;  
+        }  
+
+        .hobbies-grid {  
+            grid-template-columns: 1fr 1fr;  
+        }  
+
+        .about-boxes {  
+            grid-template-columns: 1fr;  
+        }  
+
+        .profile-container {  
+            width: 210px;  
+            height: 210px;  
+        }  
+
+        .nav-links {  
+            font-size: 0.85rem;  
+        }  
+    }  
+
+</style>
+
+</head>  <body>  <!-- =========================  
+     NAVIGATION  
+========================== -->  
+
+<header>  
+
+    <nav class="navbar">  
+
+        <a href="#home" class="logo">  
+            Bezawit<span>.</span>  
+        </a>  
+
+        <ul class="nav-links">  
+
+            <li>  
+                <a href="#home">Home</a>  
+            </li>  
+
+            <li>  
+                <a href="#about">About</a>  
+            </li>  
+
+            <li>  
+                <a href="#skills">Skills</a>  
+            </li>  
+
+            <li>  
+                <a href="#hobbies">Hobbies</a>  
+            </li>  
+
+            <li>  
+                <a href="#education">Education</a>  
+            </li>  
+
+            <li>  
+                <a href="#contact">Contact</a>  
+            </li>  
+
+        </ul>  
+
+    </nav>  
+
+</header>  
+
+
+<!-- =========================  
+     HERO  
+========================== -->  
+
+<section class="hero" id="home">  
+
+    <div class="hero-container">  
+
+        <div class="hero-text">  
+
+            <h4>Hello, I'm</h4>  
+
+            <h1>  
+                Bezawit <span>Demelash</span>  
+            </h1>  
+
+            <p>  
+                I am an undergraduate nursing student with a  
+                strong interest in web development, graphic  
+                design, and social media management. I enjoy  
+                learning new skills and turning ideas into  
+                meaningful projects.  
+            </p>  
+
+            <div class="hero-buttons">  
+
+                <a href="#about" class="btn primary-btn">  
+                    Explore My Portfolio  
+                </a>  
+
+                <a href="#contact" class="btn secondary-btn">  
+                    Contact Me  
+                </a>  
+
+            </div>  
+
+        </div>  
+
+
+        <div class="hero-image">  
+
+            <div class="profile-container">  
+
+                <img  
+                    src="photo_2026-08-03_14-22-47.jpg"  
+                    alt="Photo of Bezawit Demelash"  
+                >  
+
+            </div>  
+
+        </div>  
+
+    </div>  
+
+</section>  
+
+
+<!-- =========================  
+     ABOUT  
+========================== -->  
+
+<section class="about" id="about">  
+
+    <div class="container">  
+
+        <div class="section-title">  
+
+            <h2>About Me</h2>  
+
+            <div class="line"></div>  
+
+            <p>Get to know me and my interests</p>  
+
+        </div>  
+
+
+        <div class="about-content">  
+
+            <div class="about-text">  
+
+                <h3>Learning, Creating & Growing</h3>  
+
+                <p>  
+                    Greetings! My name is  
+                    <strong>Bezawit Demelash</strong>.  
+                    I am currently studying nursing and  
+                    exploring the world of technology and  
+                    digital creativity.  
+                </p>  
+
+                <p>  
+                    I am particularly interested in frontend  
+                    development, graphic design, and social  
+                    media management. Currently, I am learning  
+                    frontend development through the  
+                    IS Hub Summer Camp.  
+                </p>  
+
+                <p>  
+                    My goal is to continuously develop my  
+                    skills and combine creativity, technology,  
+                    and communication to create useful  
+                    digital experiences.  
+                </p>  
+
+            </div>  
+
+
+            <div class="about-boxes">  
+
+                <div class="about-box">  
+
+                    <h4>01</h4>  
+
+                    <p>  
+                        Creative and curious learner  
+                    </p>  
+
+                </div>  
+
+
+                <div class="about-box">  
+
+                    <h4>02</h4>  
+
+                    <p>  
+                        Interested in technology  
+                    </p>  
+
+                </div>  
+
+
+                <div class="about-box">  
+
+                    <h4>03</h4>  
+
+                    <p>  
+                        Passionate about growth  
+                    </p>  
+
+                </div>  
+
+
+                <div class="about-box">  
+
+                    <h4>04</h4>  
+
+                    <p>  
+                        Strong communication skills  
+                    </p>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+    </div>  
+
+</section>  
+
+
+<!-- =========================  
+     SKILLS  
+========================== -->  
+
+<section class="skills" id="skills">  
+
+    <div class="container">  
+
+        <div class="section-title">  
+
+            <h2>My Skills</h2>  
+
+            <div class="line"></div>  
+
+            <p>Skills I am developing and using</p>  
+
+        </div>  
+
+
+        <div class="skills-grid">  
+
+            <div class="skill-card">  
+
+                <div class="skill-number">  
+                    01  
+                </div>  
+
+                <h3>Graphic Design</h3>  
+
+                <p>  
+                    Creating simple and attractive visual  
+                    designs and learning modern design  
+                    principles.  
+                </p>  
+
+            </div>  
+
+
+            <div class="skill-card">  
+
+                <div class="skill-number">  
+                    02  
+                </div>  
+
+                <h3>Social Media Management</h3>  
+
+                <p>  
+                    Creating content ideas, managing social  
+                    media platforms, and understanding  
+                    digital marketing.  
+                </p>  
+
+            </div>  
+
+
+            <div class="skill-card">  
+
+                <div class="skill-number">  
+                    03  
+                </div>  
+
+                <h3>Leadership</h3>  
+
+                <p>  
+                    Working with others, taking responsibility,  
+                    and developing teamwork and leadership  
+                    abilities.  
+                </p>  
+
+            </div>  
+
+
+            <div class="skill-card">  
+
+                <div class="skill-number">  
+                    04  
+                </div>  
+
+                <h3>Communication</h3>  
+
+                <p>  
+                    Communicating ideas clearly and building  
+                    positive relationships with others.  
+                </p>  
+
+            </div>  
+
+        </div>  
+
+    </div>  
+
+</section>  
+
+
+<!-- =========================  
+     HOBBIES  
+========================== -->  
+
+<section class="hobbies" id="hobbies">  
+
+    <div class="container">  
+
+        <div class="section-title">  
+
+            <h2>My Hobbies</h2>  
+
+            <div class="line"></div>  
+
+            <p>Things I enjoy doing in my free time</p>  
+
+        </div>  
+
+
+        <div class="hobbies-grid">  
+
+            <div class="hobby">  
+
+                <div class="icon">📚</div>  
+
+                <h4>Reading Books</h4>  
+
+            </div>  
+
+
+            <div class="hobby">  
+
+                <div class="icon">🌎</div>  
+
+                <h4>Learning Languages</h4>  
+
+            </div>  
+
+
+            <div class="hobby">  
+
+                <div class="icon">🎥</div>  
+
+                <h4>Educational Videos</h4>  
+
+            </div>  
+
+
+            <div class="hobby">  
+
+                <div class="icon">🎧</div>  
+
+                <h4>Audiobooks</h4>  
+
+            </div>  
+
+        </div>  
+
+    </div>  
+
+</section>  
+
+
+<!-- =========================  
+     EDUCATION  
+========================== -->  
+
+<section class="education" id="education">  
+
+    <div class="container">  
+
+        <div class="section-title">  
+
+            <h2>Education</h2>  
+
+            <div class="line"></div>  
+
+            <p>My current academic journey</p>  
+
+        </div>  
+
+
+        <div class="education-card">  
+
+            <h3>Undergraduate Student</h3>  
+
+            <p>  
+                <strong>Addis Ababa University</strong>  
+            </p>  
+
+            <p>  
+                Currently pursuing my university education  
+                while developing additional skills in  
+                technology and digital creativity.  
+            </p>  
+
+            <span class="status">  
+                Current Student  
+            </span>  
+
+        </div>  
+
+    </div>  
+
+</section>  
+
+
+<!-- =========================  
+     CONTACT  
+========================== -->  
+
+<section class="contact" id="contact">  
+
+    <div class="container">  
+
+        <div class="section-title">  
+
+            <h2>Contact Me</h2>  
+
+            <div class="line"></div>  
+
+            <p>Let's connect and create something meaningful</p>  
+
+        </div>  
+
+
+        <div class="contact-content">  
+
+
+            <div class="contact-info">  
+
+                <h3>Get In Touch</h3>  
+
+                <p>  
+                    If you would like to contact me about  
+                    a project, collaboration, or opportunity,  
+                    feel free to send me a message.  
+                </p>  
+
+
+                <div class="contact-item">  
+
+                    <strong>Email</strong>  
+
+                    <p>  
+                        <a href="mailto:bezawitdemelash9@gmail.com">  
+                            bezawitdemelash9@gmail.com  
+                        </a>  
+                    </p>  
+
+                </div>  
+
+
+                <div class="contact-item">  
+
+                    <strong>Interests</strong>  
+
+                    <p>  
+                        Web Development • Graphic Design  
+                        • Social Media  
+                    </p>  
+
+                </div>  
+
+            </div>  
+
+
+            <form class="contact-form">  
+
+                <div class="form-group">  
+
+                    <label for="name">  
+                        Full Name  
+                    </label>  
+
+                    <input  
+                        type="text"  
+                        id="name"  
+                        name="name"  
+                        placeholder="Enter your full name"  
+                        required  
+                    >  
+
+                </div>  
+
+
+                <div class="form-group">  
+
+                    <label for="email">  
+                        Email Address  
+                    </label>  
+
+                    <input  
+                        type="email"  
+                        id="email"  
+                        name="email"  
+                        placeholder="Enter your email"  
+                        required  
+                    >  
+
+                </div>  
+
+
+                <div class="form-group">  
+
+                    <label for="reason">  
+                        Reason for Contact  
+                    </label>  
+
+                    <select  
+                        id="reason"  
+                        name="reason"  
+                    >  
+
+                        <option value="general">  
+                            General Inquiry  
+                        </option>  
+
+                        <option value="project">  
+                            Project  
+                        </option>  
+
+                        <option value="job">  
+                            Job Opportunity  
+                        </option>  
+
+                    </select>  
+
+                </div>  
+
+
+                <div class="form-group">  
+
+                    <label for="message">  
+                        Message  
+                    </label>  
+
+                    <textarea  
+                        id="message"  
+                        name="message"  
+                        rows="5"  
+                        placeholder="Write your message..."  
+                        required  
+                    ></textarea>  
+
+                </div>  
+
+
+                <button  
+                    type="submit"  
+                    class="submit-btn"  
+                >  
+                    Send Message  
+                </button>  
+
+            </form>  
+
+        </div>  
+
+    </div>  
+
+</section>  
+
+
+<!-- =========================  
+     FOOTER  
+========================== -->  
+
+<footer>  
+
+    <h3>Bezawit Demelash</h3>  
+
+    <p>  
+        Undergraduate Student • Creative Learner  
+    </p>  
+
+    <p>  
+        Email:  
+        <a href="mailto:bezawitdemelash9@gmail.com">  
+            bezawitdemelash9@gmail.com  
+        </a>  
+    </p>  
+
+    <p>  
+        &copy; 2026 Bezawit Demelash. All Rights Reserved.  
+    </p>  
+
+</footer>
+
+</body> 
+ </html>  
